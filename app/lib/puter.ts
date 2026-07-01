@@ -387,8 +387,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       setError("Puter.js not available");
       return;
     }
-    // return puter.kv.delete(key);
-    return puter.kv.del(key);
+    return puter.kv.delete(key);
   };
 
   const listKV = async (pattern: string, returnValues?: boolean) => {

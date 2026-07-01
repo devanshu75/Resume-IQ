@@ -9,7 +9,7 @@ interface AccordionContextType {
 }
 
 const AccordionContext = createContext<AccordionContextType | undefined>(
-  undefined
+  undefined,
 );
 
 const useAccordion = () => {
@@ -34,7 +34,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   className = "",
 }) => {
   const [activeItems, setActiveItems] = useState<string[]>(
-    defaultOpen ? [defaultOpen] : []
+    defaultOpen ? [defaultOpen] : [],
   );
 
   const toggleItem = (id: string) => {
